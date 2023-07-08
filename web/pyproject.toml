@@ -1,0 +1,13 @@
+[tool.isort]
+profile = "black"
+[tool.pylint.'MESSAGES CONTROL']
+max-line-length = 120
+disable = [
+    "missing-docstring",
+]
+[tool.mypy]
+mypy_path = "."
+ignore_missing_imports = true
+namespace_packages = true
+explicit_package_bases = true
+

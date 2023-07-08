@@ -1,0 +1,17 @@
+[tool.isort]
+profile = "black"
+[tool.pylint.'MESSAGES CONTROL']
+max-line-length = 120
+disable = [
+    "import-error", # TODO set pylintrc paths
+    "missing-docstring",
+    "fixme",
+    "invalid-name", # using common names like w, h, x, y
+    "protected-access", # grid parent access from child object
+]
+[tool.mypy]
+mypy_path = "./lib"
+ignore_missing_imports = true
+namespace_packages = true
+explicit_package_bases = true
+

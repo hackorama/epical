@@ -1,0 +1,77 @@
+<html>
+<head>
+  <meta name="mobile-wep-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="ePiCal">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="viewport" content="initial-scale=1, viewport-fit=cover user-scalable=no" />
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+  <link rel="manifest" href="/manifest.json">
+  <link rel="stylesheet" href="style.css">
+<title>ePiCal Settings</title>
+</head>
+<body onload="start()">
+<div class="page">
+
+<script src="script.js"></script>
+
+<div class="header"></div>
+
+<p>
+
+<div class="controls">
+    <div class="status" id="disable">📵</div>
+    <div class="status" id="battery">️️🔋</div>
+    <div class="status" id="photo">🌁</div>
+    <div class="status" id="package">📀</div>
+</div>
+
+
+<div class="controls">
+    <div class="control_button">
+    <form action="/refresh/disable" method="post">
+        <input type="submit" name="submit" value="Disable" id="disable_button" />
+    </form>
+    </div>
+
+    <div class="control_button">
+    <form action="/refresh/battery" method="post">
+        <input type="submit" name="submit" value="Charge" id="battery_button" />
+    </form>
+    </div>
+
+    <div class="control_button">
+    <form action="/delete/photo" method="post">
+        <input type="submit" name="submit" value="Cancel" id="photo_button" />
+    </form>
+    </div>
+
+    <div class="control_button">
+    <form action="/remove/upgrade" method="post">
+        <input type="submit" name="submit" value="Cancel" id="package_button" />
+    </form>
+    </div>
+</div>
+
+<div class="controls">
+    <div class="control_button">
+    <form action="upload/photo" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" id="file" accept="image/*" onchange="fileSelected()" />
+        <input type="submit" name="submit" value="Set Photo" id="upload_button" disabled="true" />
+    </form>
+    </div>
+</div>
+
+<div id="preview"></div>
+
+<div class="logs" id="epical"></div>
+
+    <div class="footer" id="footer">
+    <a href="index.html">Done</a>
+</div>
+
+</div>
+</body>
+</html>

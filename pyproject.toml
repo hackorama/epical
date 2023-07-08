@@ -1,0 +1,21 @@
+[tool.isort]
+profile = "black"
+[tool.pylint.'MESSAGES CONTROL']
+max-line-length = 120
+disable = [
+    "import-error", # ignore device specific pi epd lib imports on dev system
+    "missing-docstring",
+    "broad-except", # retry unknown pi device and network exceptions
+    "import-outside-toplevel", # late device specific pi epd imports
+    "invalid-name", # using common names like w, h, x, y
+]
+[tool.mypy]
+mypy_path = "./epical:./grid/lib"
+# exclude to fix: duplicate module named "__main__"
+exclude = ["grid/lib/__init__.py", "epd"]
+ignore_missing_imports = true
+namespace_packages = true
+explicit_package_bases = true
+[tool.ruff]
+line-length = 120
+

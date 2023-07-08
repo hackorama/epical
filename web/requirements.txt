@@ -1,0 +1,6 @@
+fastapi
+kollavarsham
+pillow
+pytz
+python-multipart
+uvicorn

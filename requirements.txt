@@ -1,0 +1,6 @@
+kollavarsham
+multipledispatch
+pillow
+pytz
+urllib3<2.0
+requests

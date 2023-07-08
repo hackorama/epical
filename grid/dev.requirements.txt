@@ -1,0 +1,11 @@
+black
+coverage
+flake8
+isort
+mypy
+pyflakes
+pytest
+pylint
+typing_extensions
+types-pytz
+types-requests

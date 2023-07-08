@@ -1,0 +1,6 @@
+{
+    "start_url": "/",
+    "scope": "/",
+    "display": "standalone",
+    "short_name": "ePiCal"
+}
